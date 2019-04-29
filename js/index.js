@@ -126,9 +126,9 @@ var trigger_count = 0;
 var trigger_timeout = null;
 
 $(document).ready(function() {
-	var currentDate = new Date(2019,4,29);
-	console.log(currentDate);
-	var futureDate  = new Date(2019,5,2);
+	var currentDate = new Date(Date.now());
+	var futureDate  = new Date(2019,4,2);
+	// console.log(futureDate);
 	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
 
 	$('.countdown_mp3').trigger('load');
