@@ -1,66 +1,48 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Try</title>
-	<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
-	<meta content="utf-8" http-equiv="encoding">
-	<link rel="stylesheet" type="text/css" href="lib/css/style.css">
-</head>
+<html lang="en" >
 
+<head>
+  <meta charset="UTF-8">
+  <title>Project Time Count Down</title>
+  <meta name="viewport" content="width=960">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+  
+  <link rel='stylesheet' href='https://peter.build/newyears/css/style.css'>
+<link rel='stylesheet' href='https://peter.build/newyears/css/flipclock.css'>
+<link rel='stylesheet' href='https://peter.build/newyears/css/animate.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Great+Vibes'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
 
 <body>
 
-	<center>
-		
-		<h1>
-			Code in Console
-		</h1>
-		<label>
-			Image File:
-		</label>
-		<input type="file" id="imageLoader" name="imageLoader"/>
+	<div class="wrapper">
+		  <div class="clock animated flipInX"></div>
+	</div>
+	<canvas id="confetti"></canvas>
+	<div class="message">Happy New Year !!!</div>
+	<div class="stars"></div>
+	<div class="twinkling"></div>
+	<div class="clouds"></div>
 
-		<h1 class="timer">Timer</h1>
-		<button class="startTimer reset" onclick="startTimer()">Start</button>
-		<button class="pauseTimer reset" onclick="pauseTimer()">Pause</button>
-		<button class="resetTimer reset" onclick="resetTimer()">Stop</button>
+	<audio class="happy_mp3 hide" preload="none" id="happy_mp3">
+		  <source src="https://peter.build/newyears/audio/happy-new-year.m4a" type="audio/m4a">
+		  <source src="https://peter.build/newyears/audio/happy-new-year.ogg" type="audio/ogg" />
+	</audio>
 
-	</center>
-	<br>
-
-	<canvas id="imageCanvas" style="float:left">
-		sorry canvas not suppprot your browser.
-	</canvas>
+	<audio class="countdown_mp3 hide" preload="none" id="countdown_mp3">
+		  <source src="https://peter.build/newyears/audio/countdown.m4a" type="audio/m4a">
+		  <source src="https://peter.build/newyears/audio/countdown.ogg" type="audio/ogg" />
+	</audio>
+	<script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
+	<script src='https://peter.build/newyears/js/flipclock.js'></script>
+	<!-- <script src='https://peter.build/newyears/js/newyear.js?v1.01'></script> -->
+	<script  src="js/index.js"></script>
 
 </body>
-
-<script src="time.js"></script>
-
-<!-- import pretrain model -->
-<!-- <script src="lib/model/fake.json"></script> -->
-<script src="lib/model/data.json"></script>
-
-
-<!-- super resolution task -->
-<script src="lib/js/tensor.js"></script>
-<script src="lib/js/conv.js"></script>
-
-<!-- <script src="lib/js/fn.js"></script> 
-<script src="lib/js/network.js"></script>  -->
-
-
-<!-- <script src="lib/fake/fakeNetwork.js"></script>  -->
-<script src="lib/fake/fakeFunction.js"></script> 
-<script src="lib/js/checkNet.js"></script> 
-
-<script src="lib/js/img.js"></script> 
-<script src="lib/js/main.js"></script> 
-
-
-
-
-
-
 
 </html>
