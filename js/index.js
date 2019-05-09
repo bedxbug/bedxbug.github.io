@@ -129,7 +129,7 @@ $(document).ready(function() {
 	var currentDate = new Date(Date.now());
 	var futureDate  = new Date(2019,5,5);
 	// console.log(futureDate);
-	var diff = futureDate.getTime() / 1000 - currentDate.getTime() / 1000;
+	var diff = Math.abs( futureDate.getTime() / 1000 - currentDate.getTime() / 1000 ) ;
 
 	$('.countdown_mp3').trigger('load');
 	$('.happy_mp3').trigger('load');
