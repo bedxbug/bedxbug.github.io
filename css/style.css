@@ -1,11 +1,33 @@
-/* See Setting for included CSS */
+table {
+  width: 300px;
+  margin: 20px auto;
+  background: #fafafa;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-/* 
+table thead {
+  border: 1px solid #222;
+  border-right: 0;
+  background: #333;
+}
 
-README: 
----
-In a hurry? Click Countdown 5 times to see final animation.  There is an audible 10 second countdown too, but you'll just have to trust me on that one ;) 
+table thead tr th {
+  color: #fff;
+  margin: 20px; 
+  padding: 50px;
+  border-right: 1px solid #222;
+}
 
-Audio does not work on iOS Safari.
+table tbody {
+  border-left: 1px solid #ccc;
+}
 
-*/
+table tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+table tbody tr td {
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
