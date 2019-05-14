@@ -11,7 +11,9 @@ function Get(yourUrl){
 var yourUrl = "https://nsu-offered-course-list.now.sh";
 var json_obj = JSON.parse(Get(yourUrl));
 var json_length = json_obj.courses.length;
-var keys = Object.keys(json_obj.courses[0]);
+var rawKeys = Object.keys(json_obj.courses[0]);
+var keys = rawKeys.splice(1,)
+console.log(keys);
 
 
 var data = document.getElementById("dataList");
