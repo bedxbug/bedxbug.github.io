@@ -24,9 +24,9 @@ var cell_length = data.rows[0].cells.length ;
 
 // console.log(json_length);
 
-for(var j = 1; j < json_length ; j++)
+for(var j = 0; j < json_length ; j++)
 {	
-	var row = data.insertRow(j);
+	var row = data.insertRow(j+1);
 	for(var i=0; i<keys.length; i++){
 		var key = keys[i];
 		var temp = row.insertCell(i);
