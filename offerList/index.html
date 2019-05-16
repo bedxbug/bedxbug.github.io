@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Course List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  
+  <br>
+  <!-- <button type="button" class="btn btn-primary center-block" id="button1">Refresh</button> -->
+  <br>
+  <!-- <input type="search" class="center-block" id="search" name="Search Course"> -->
+  <!-- <input type="text" id="myInput" class="center-block" onkeyup="myFunction()" placeholder="Search"> -->
+
+
+  <center>
+    <form class="form-inline active-cyan-4">
+    <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search" id="myInput" onkeyup="myFunction()">
+    <i style="font-size:24px" class="fa">&#xf002;</i>
+    </form>
+  </center>
+  
+<!--   <select id="choice" >
+    <option value="0" selected="selected">Course</option>    
+    <option value="1">Section</option>   
+    <option value="2">Faculty</option>  
+    <option value="3">Time</option>  
+    <option value="4">Room</option>  
+    <option value="5">Seats Available</option>
+  </select> -->
+
+  <table id="dataList" class="">
+  <!-- <table class="table table-straped table-bordered table-hover"> -->
+
+    <thead>
+      <tr>
+         <th>Course</th>    
+         <th>Section</th>   
+         <th>Faculty</th>  
+         <th>Time</th>  
+         <th>Room</th>  
+         <th>Seats Available</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script  src="js/index.js"></script>
+
+  <script type="text/javascript">
+    function myFunction() {
+      var input, filter, table, tr, td, i, txtValue;
+      input = document.getElementById("myInput");
+      filter = input.value.toUpperCase();
+      table = document.getElementById("dataList");
+      tr = table.getElementsByTagName("tr");
+      for (i = 0; i < tr.length; i++) {
+        td = tr[i].getElementsByTagName("td")[0];
+        if (td) {
+          txtValue = td.textContent || td.innerText;
+          if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }       
+      }
+    }
+
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
