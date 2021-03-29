@@ -126,11 +126,24 @@ var trigger_count = 0;
 var trigger_timeout = null;
 
 $(document).ready(function() {
+	
+	
+	/*
+		year - month - day
+		month starts from 0
+		Jan - 0
+	*/
+
 	var currentDate = new Date(Date.now());
-	// year - month - day
-	var futureDate  = new Date(2019,5,6);
-	// console.log(futureDate);
+	
+	var futureDate  = new Date(2021,3,14);
+	
 	var diff = Math.abs( futureDate.getTime() / 1000 - currentDate.getTime() / 1000 ) ;
+
+	console.log(currentDate);
+	console.log(futureDate);
+	console.log(diff);
+
 
 	$('.countdown_mp3').trigger('load');
 	$('.happy_mp3').trigger('load');
