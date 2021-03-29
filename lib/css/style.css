@@ -1,0 +1,19 @@
+.center
+{
+	/*width: 60%;*/
+	margin: auto;
+	/*border: 2px solid black;*/
+	text-align: center;
+}
+
+video:focus {
+	outline: none; !important;
+}
+
+#my_video{
+	/*object-fit: initial;*/
+}
+
+body {
+	font-display: block;
+}

@@ -1,48 +1,71 @@
 <!DOCTYPE html>
-<html lang="en" >
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Project Time Count Down</title>
-  <meta name="viewport" content="width=960">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
-  
-  <link rel='stylesheet' href='https://peter.build/newyears/css/style.css'>
-<link rel='stylesheet' href='https://peter.build/newyears/css/flipclock.css'>
-<link rel='stylesheet' href='https://peter.build/newyears/css/animate.css'>
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Great+Vibes'>
-
-      <link rel="stylesheet" href="css/style.css">
-
-  
+  <title>FTP Streamer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="lib/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/style.css">
+	<script src="lib/js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <body>
 
-	<div class="wrapper">
-		  <div class="clock animated flipInX"></div>
+	<div class="center">
+		<h1 id="title">Stream FTP</h1>
 	</div>
-	<canvas id="confetti"></canvas>
-	<div class="message">Happy New Year !!!</div>
-	<div class="stars"></div>
-	<div class="twinkling"></div>
-	<div class="clouds"></div>
 
-	<audio class="happy_mp3 hide" preload="none" id="happy_mp3">
-		  <source src="https://peter.build/newyears/audio/happy-new-year.m4a" type="audio/m4a">
-		  <source src="https://peter.build/newyears/audio/happy-new-year.ogg" type="audio/ogg" />
-	</audio>
+	<div class="container">
+	  <div class="row">
+	    
+	    <div class="col-sm">
+			<video id="my_video" controls type="video/mp4"></video>
+	    </div>
 
-	<audio class="countdown_mp3 hide" preload="none" id="countdown_mp3">
-		  <source src="https://peter.build/newyears/audio/countdown.m4a" type="audio/m4a">
-		  <source src="https://peter.build/newyears/audio/countdown.ogg" type="audio/ogg" />
-	</audio>
-	<script src='https://code.jquery.com/jquery-1.11.2.min.js'></script>
-	<script src='https://peter.build/newyears/js/flipclock.js'></script>
-	<!-- <script src='https://peter.build/newyears/js/newyear.js?v1.01'></script> -->
-	<script  src="js/index.js"></script>
+	    <div class="col-sm">
+	      <iframe id="myFrame"></iframe>
+	    </div>
+	  </div>
+	</div>
+
+	<br>
+
+	<div class="container">
+	  <div class="row">
+	    
+	    <div class="col-8">
+			<input class="col-9" type="text" id="inputUser" placeholder="Enter URL">
+			<button type="button" class="btn btn-warning" id="runUrl">Run</button>
+	    </div>
+
+	    <div class="col-4">
+			<div class="dropdown">
+			    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+			      Choose FTP Server
+			    </button>
+			    <div class="dropdown-menu">
+			    </div>
+			  </div>
+	    </div>
+	  </div>
+	</div>
+
+	<br>	
+	<div class="container center" id="video_control">
+	  <!-- <h3>Media Control</h3> -->
+	  <button type="button" class="btn btn-primary">Reload</button>
+	  <button type="button" class="btn btn-primary">Clear</button>
+	  <button type="button" class="btn btn-success">Play</button>
+	  <button type="button" class="btn btn-info">Info</button>
+	  <button type="button" class="btn btn-warning">Next</button>
+	  <button type="button" class="btn btn-danger">Stop</button>
+	</div>
 
 </body>
 
+<script src="lib/js/streamFTPClass.js"></script>
+<script src="lib/js/stream.js"></script>
 </html>
